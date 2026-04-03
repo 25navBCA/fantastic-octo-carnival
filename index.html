@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Naveen Portfolio</title>
+<style>
+    /* ---------------------------------- */
+    /* Updated, Colorful Portfolio Styling */
+    /* ---------------------------------- */
+
+    :root {
+        --bg-main: #0a0a0a;
+        --bg-card: #ffffff;
+        --accent: #2ecc71; /* Vibrant Green Accent */
+        --accent-hover: #27ae60;
+        --text-white: #ffffff;
+        --text-light: #bbbbbb;
+        --border-dark: #333333;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, var(--bg-main), #111);
+        color: var(--text-white);
+        text-align: center;
+        scroll-behavior: smooth;
+    }
+
+    /* 1. Updated Navigation with colorful highlights */
+    nav {
+        padding: 20px;
+        background: rgba(10, 10, 10, 0.95);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        border-bottom: 2px solid var(--accent); /* Color border */
+    }
+
+    nav a {
+        color: var(--text-white);
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: var(--accent); /* Green on hover */
+    }
+
+    .container {
+        margin-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 48px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        color: var(--accent); /* Highlighted Name */
+    }
+
+    /* Green color for all section headers */
+    h2 {
+        color: var(--accent);
+        margin-bottom: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: var(--text-light);
+        font-size: 16px;
+        max-width: 650px;
+        margin: 0 auto 30px auto;
+        line-height: 1.6;
+    }
+
+    /* Sections */
+    .section-box {
+        padding: 50px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 35px;
+    }
+
+    /* 2. Project Cards with Green Borders on Hover */
+    .project-card {
+        background: #111;
+        border: 1px solid var(--border-dark);
+        padding: 25px;
+        border-radius: 12px;
+        width: 290px;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        text-align: left;
+    }
+
+    .project-card h3 {
+        color: var(--text-white);
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .project-card p {
+        color: var(--text-light);
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .project-card:hover {
+        border-color: var(--accent); /* Green border on hover */
+        transform: translateY(-5px);
+    }
+
+    /* 3. Updated Contact Card with subtle glow */
+    .card {
+        background: var(--bg-card);
+        color: #000000;
+        padding: 35px;
+        border-radius: 16px;
+        width: 330px;
+        margin: 60px auto;
+        box-shadow: 0 10px 40px rgba(46, 204, 113, 0.2); /* Subtle green glow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 50px rgba(46, 204, 113, 0.4); /* Brighter green glow */
+    }
+
+    .card h2 {
+        color: #000000; /* Keeping 'Contact Me' black on white card */
+        font-weight: 700;
+    }
+
+    input {
+        width: 90%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+        border-color: var(--accent); /* Green outline on focus */
+    }
+
+    /* 4. Colorful Submit Button */
+    button {
+        padding: 12px 25px;
+        border: none;
+        background: var(--accent); /* Colorful background */
+        color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 15px;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        background: var(--accent-hover);
+        transform: scale(1.05);
+    }
+
+    #success {
+        margin-top: 20px;
+        color: var(--accent); /* Green success message */
+        font-weight: bold;
+        display: none;
+        font-size: 15px;
+    }
+</style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container" id="home">
+        <h1>Naveen Kumar</h1>
+        <p>BCA Student | Full-Stack Developer</p>
+
+        <div id="about" class="section-box">
+            <h2>About My Work</h2>
+            <p>I am a second-semester BCA student at Kristu Jayanti College. I specialize in integrating Python backends with modern frontend interfaces. I am passionate about game logic and database optimization using MySQL and MongoDB.</p>
+        </div>
+
+        <div id="projects" class="section-box">
+            <h2>Technical Projects</h2>
+            <div class="grid">
+                <div class="project-card">
+                    <h3>Portfolio API</h3>
+                    <p>Built a REST API using Python (app.py) to handle user data securely via Render.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Database Systems</h3>
+                    <p>Designed structured schemas for MySQL to store and retrieve portfolio interactions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="contact">
+            <h2 style="color: black;">Contact Me</h2>
+            <form id="form">
+                <input id="name" placeholder="Name" required>
+                <input id="roll" placeholder="Favorite Game/Tech" required>
+                <input id="email" type="email" placeholder="Email" required>
+                <button type="submit">Submit Here</button>
+            </form>
+            <div id="success">Successfully Submitted!</div>
+        </div>
+    </div>
+
+    <script>
+        // YOUR BACKEND LINK - Keep this exactly as it was
+        const backend = "https://naveen-portfolio-4.onrender.com";
+
+        document.getElementById("form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            await fetch(`${backend}/submit`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: document.getElementById("name").value,
+                    roll: document.getElementById("roll").value,
+                    email: document.getElementById("email").value
+                })
+            });
+
+            document.getElementById("success").style.display = "block";
+            document.getElementById("form").reset();
+        });
+    </script>
+
+</body>
+</html>
